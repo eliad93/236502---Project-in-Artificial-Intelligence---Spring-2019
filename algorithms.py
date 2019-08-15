@@ -28,7 +28,7 @@ class TDIDT(abc.ABC):
         node.attribute = attribute
         E_left, E_right, threshold = self._split_by_attribute(E, T, attribute)
         node.threshold = threshold
-        T_new = T.copy.remove(attribute)
+        T_new = T.copy.remove(attribute)  # todo: review
         left_son = Node(None, None, node, None, None)
         right_son = Node(None, None, node, None, None)
         self._fit_aux(left_son, E_left, T_new)
@@ -38,4 +38,4 @@ class TDIDT(abc.ABC):
 class RandomChooseTree(TDIDT):
 
     def _choose_attribute(self, E, T):
-        return random.choice(T)
+        return random.choice(T)  # todo: review

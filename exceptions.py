@@ -7,6 +7,5 @@ class Error(Exception):
 
 class DtypeNotSupported(Error):
 
-    def __init__(self, dtype):
-        self.data_type = dtype
-        print(f"{dtype} is not supported ")
+    def __init__(self, ):
+        print(f"data type is not supported ")
